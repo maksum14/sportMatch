@@ -12,7 +12,7 @@ public class GetGameSummary {
     private final Comparator<Match> SUMMARY_MATCH_COMPARATOR = Comparator.comparing(Match::getTotalScore)
             .thenComparing(Match::getStartDate).reversed();
 
-    public List<Match> getLiveSummary() {
+    public List<Match> getLiveScoreBoard() {
         return ScoreTable.DB_INSTANCE.stream()
                 .sorted(SUMMARY_MATCH_COMPARATOR)
                 .collect(Collectors.toList());

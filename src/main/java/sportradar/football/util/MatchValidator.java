@@ -14,7 +14,7 @@ public class MatchValidator {
 
     public static void validateTeamNames(String homeTeamName, String awayTeamName) {
         if (isEmpty(homeTeamName) || isEmpty(awayTeamName)) {
-            throw new InvalidMatchAttributeException("home or away team is not valid");
+            throw new InvalidMatchAttributeException("Home or away team name is not valid");
         }
     }
 }
