@@ -22,6 +22,18 @@ public class Match {
         this.awayTeam = new Team(awayTeam);
     }
 
+    public int getTotalScore() {
+        return homeTeam.getScore() + awayTeam.getScore();
+    }
+
+    public void setAwayScore(int score) {
+        awayTeam.setScore(score);
+    }
+
+    public void setHomeScore(int score) {
+        homeTeam.setScore(score);
+    }
+
     @Override
     public String toString() {
         return homeTeam.getName() + " " + homeTeam.getScore() + " - " + awayTeam.getName() + " " + awayTeam.getScore();
